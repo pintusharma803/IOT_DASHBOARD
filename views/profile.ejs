@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ESP32 Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/iot.css">
+</head>
+
+<body>
+    <h1>ESP32 Dashboard</h1>
+
+    <!-- Device Status -->
+    <div class="status-box">
+        <div class="status">
+            <div id="statusDot" class="dot offline"></div>
+            <span id="deviceStatus" class="offline-text">Offline</span>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards">
+
+        <!-- Power -->
+        <div class="card">
+            <div class="led-title">Led Control</div>
+            <div id="powerIcon" class="power-icon power-on">
+                <i id="switchIcon" class="fa-solid fa-power-off power-btn poweroff" onclick="toggleLed()"></i>
+            </div>
+            <div id="powerText" class="off-text">OFF</div>
+        </div>
+
+        <!-- Temperature -->
+        <div class="card">
+            <div class="temp-title">Temperature</div>
+            <div id="temperature">25 °C</div>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/iot.js"></script>
+
+</body>
+
+</html>

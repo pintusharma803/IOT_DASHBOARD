@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OTP Verification</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/login.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>OTP Verification</h1>
+
+        <p>
+            Enter the 5-digit OTP sent to your registered mobile number.
+        </p>
+
+        <div class="otp-box">
+
+            <input type="text" maxlength="1" class="otp">
+            <input type="text" maxlength="1" class="otp">
+            <input type="text" maxlength="1" class="otp">
+            <input type="text" maxlength="1" class="otp">
+            <input type="text" maxlength="1" class="otp">
+
+        </div>
+
+        <button id="verifyBtn">
+
+            Verify OTP
+
+        </button>
+
+        <div id="errorotp"></div>
+
+    </div>
+
+    <script>
+
+        
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OTP Verification</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            font-family: 'Poppins', sans-serif;
+
+            background: #f4f5f7;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            min-height: 100vh;
+
+            padding: 20px;
+
+        }
+
+        /* Card */
+
+        .card {
+
+            width: 100%;
+            max-width: 420px;
+
+            background: #fff;
+
+            padding: 35px 30px;
+
+            border-radius: 14px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+
+            text-align: center;
+
+        }
+
+        /* Heading */
+
+        .card h1 {
+
+            font-size: clamp(28px, 5vw, 42px);
+
+            color: #222;
+
+            margin-bottom: 10px;
+
+        }
+
+        .card p {
+
+            color: #777;
+
+            font-size: 15px;
+
+            line-height: 1.5;
+
+            margin-bottom: 30px;
+
+        }
+
+        /* OTP */
+
+        .otp-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            width: 100%;
+
+            margin-bottom: 30px;
+
+        }
+
+        .otp {
+
+            flex: 1;
+
+            max-width: 56px;
+
+            aspect-ratio: 1/1;
+
+            border: 2px solid #d8d8d8;
+
+            border-radius: 10px;
+
+            outline: none;
+
+            text-align: center;
+
+            font-size: clamp(20px, 4vw, 26px);
+
+            font-weight: 600;
+
+            transition: .25s;
+
+        }
+
+        .otp:focus {
+
+            border-color: #18c47f;
+
+            box-shadow: 0 0 10px rgba(24, 196, 127, .25);
+
+        }
+
+        /* Button */
+
+        button {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #18c47f;
+
+            color: #fff;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+        }
+
+        button:hover {
+
+            background: #14ad70;
+
+        }
+
+        button:active {
+
+            transform: scale(.98);
+
+        }
+
+        /* Error */
+
+        #error {
+
+            margin-top: 18px;
+
+            color: #e53935;
+
+            font-size: 14px;
+
+        }
+
+        /* Tablet */
+
+        @media(max-width:768px) {
+
+            .card {
+
+                padding: 30px 22px;
+
+            }
+
+            .otp-container {
+
+                gap: 10px;
+
+            }
+
+            .otp {
+
+                max-width: 52px;
+
+            }
+
+        }
+
+        /* Mobile */
+
+        @media(max-width:480px) {
+
+            .card {
+
+                padding: 25px 18px;
+
+            }
+
+            .card p {
+
+                font-size: 14px;
+
+            }
+
+            .otp-container {
+
+                gap: 8px;
+
+            }
+
+            .otp {
+
+                max-width: 48px;
+
+            }
+
+            button {
+
+                padding: 13px;
+
+            }
+
+        }
+
+        /* Small Mobile */
+
+        @media(max-width:360px) {
+
+            .otp-container {
+
+                gap: 6px;
+
+            }
+
+            .otp {
+
+                max-width: 42px;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>OTP Verification</h1>
+
+        <p>
+            Enter the 5-digit OTP sent to your registered mobile number.
+        </p>
+
+        <div class="otp-container">
+
+            <input type="text" maxlength="1" class="otp">
+            <input type="text" maxlength="1" class="otp">
+            <input type="text" maxlength="1" class="otp">
+            <input type="text" maxlength="1" class="otp">
+            <input type="text" maxlength="1" class="otp">
+
+        </div>
+
+        <button id="verifyBtn">
+            Verify OTP
+        </button>
+
+        <div id="error"></div>
+
+    </div>
+
+    <script>
+
+        const otpInputs = document.querySelectorAll(".otp");
+
+        otpInputs.forEach((input, index) => {
+
+            input.addEventListener("input", function () {
+
+                this.value = this.value.replace(/\D/g, '');
+
+                if (this.value && index < otpInputs.length - 1) {
+
+                    otpInputs[index + 1].focus();
+
+                }
+
+            });
+
+            input.addEventListener("keydown", function (e) {
+
+                if (e.key === "Backspace" && this.value === "" && index > 0) {
+
+                    otpInputs[index - 1].focus();
+
+                }
+
+            });
+
+        });
+
+        document.querySelector(".otp-container").addEventListener("paste", function (e) {
+
+            e.preventDefault();
+
+            const data = e.clipboardData.getData("text").trim();
+
+            if (/^\d{5}$/.test(data)) {
+
+                data.split("").forEach((digit, index) => {
+
+                    otpInputs[index].value = digit;
+
+                });
+
+                otpInputs[4].focus();
+
+            }
+
+        });
+
+        document.getElementById("verifyBtn").addEventListener("click", verifyOTP);
+
+        async function verifyOTP() {
+
+            const error = document.getElementById("error");
+
+            error.textContent = "";
+
+            const otp = [...otpInputs].map(input => input.value).join("");
+
+            if (otp.length !== 5) {
+
+                error.textContent = "Please enter all 5 digits.";
+
+                return;
+
+            }
+
+            try {
+
+                const response = await fetch("/auth/login/verify-otp", {
+
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        otp: otp
+                    })
+
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+
+                    window.location.href = result.redirect;
+
+                } else {
+
+                    error.textContent = result.message || "Invalid OTP";
+
+                }
+
+            } catch (err) {
+
+                console.error(err);
+
+                error.textContent = "Server Error";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html> -->

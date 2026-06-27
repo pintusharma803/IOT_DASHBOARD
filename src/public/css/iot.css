@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+/* STATUS */
+
+.status-box {
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+
+.online {
+    background: green;
+}
+
+.offline {
+    background: red;
+}
+
+#deviceStatus {
+    font-size: 17px;
+
+}
+
+.online-text {
+    color: green;
+}
+
+.offline-text {
+    color: red;
+}
+
+.status-msg {
+    margin-top: 5px;
+    color: #666;
+    font-size: 15px;
+}
+
+/* CARDS */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.card {
+    width: 400px;
+    height: 350px;
+    background: rgb(255, 255, 255);
+
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+    text-align: center;
+    padding-top: 50px;
+}
+
+.power-icon {
+    font-size: 120px;
+    margin-bottom: 50px;
+
+}
+
+#powerText {
+    font-size: 50px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.on-text {
+    color: green;
+}
+
+.off-text {
+    color: gray;
+}
+
+.temp-title {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.led-title {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#temperature {
+    margin-top: 90px;
+    font-size: 55px;
+    color: orange;
+    font-weight: bold;
+}
+
+.time {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 22px;
+}
+
+.power-btn {
+    font-size: 80px;
+    cursor: pointer;
+}
+
+
+.poweron {
+    color: green
+}
+
+.poweroff {
+    color: gray;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/login.css">
+
+</head>
+
+<body>
+
+    <div class="login-card" id="loginPage" style="display: block;">
+
+        <!-- <div class="login-header">
+        Login
+    </div> -->
+
+        <div class="form-area">
+
+            <h2>Device Login</h2>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+
+                    <label for="name">Full Name</label>
+
+                    <input type="text" id="name" placeholder="Enter your name" required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="mobile">Mobile Number</label>
+
+                    <input type="tel" id="mobile" placeholder="Enter mobile number" maxlength="10" required>
+
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+
+                <div id="errorlogin"></div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- OTP VERIFICATION PART -->
+
+    <div class="card" id="otpPage" style="display: none;">
+        <h1>OTP Verification</h1>
+        <p>Enter the 5-digit OTP sent to your registered mobile number</p>
+        <div class="otp-box">
+            <input type="text" maxlength="1" class="otp">
+            <input type="text" maxlength="1" class="otp">
+            <input type="text" maxlength="1" class="otp">
+            <input type="text" maxlength="1" class="otp">
+            <input type="text" maxlength="1" class="otp">
+        </div>
+        <button id="verifyBtn">Verify OTP</button>
+        <div id="errorotp"></div>
+        <div id="resendOtp">Resend OTP</div>
+    </div>
+    <script src="/js/login.js"></script>
+</body>
+</html>
